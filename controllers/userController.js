@@ -14,7 +14,6 @@ exports.homePage = async(req, res, next) => {
         user: row[0]
     });
 }
-
 // Register Page
 exports.registerPage = (req, res, next) => {
     res.render("register");

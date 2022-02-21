@@ -11,6 +11,7 @@
             <input type="email" class="input" name="_email" autocomplete="off" id="user_email" placeholder="Enter your email">
             <label for="user_pass">Password</label>
             <input type="password" class="input" name="_password" id="user_pass" placeholder="Enter new password">
+            <input type="checkbox" onclick="myFunction()">Show Password
             <% if(typeof msg != 'undefined'){ %>
                 <div class="success-msg">
                     <%= msg %>
@@ -25,5 +26,15 @@
                         <div class="link"><a href="./login">Login</a></div>
         </form>
     </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("user_pass");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 
     <%- include('footer'); -%>
